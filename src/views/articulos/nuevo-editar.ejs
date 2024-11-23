@@ -1,0 +1,30 @@
+<%- include('../header') %>
+    <header>
+        <span class="titulo">Articulos</span>
+    </header>
+    <main>
+        <div class="form-container">
+            <form action="">
+                <label>
+                    <span>Codigo</span>
+                    <input id="codigo" type="text" placeholder="Codigo" required>
+                </label>
+                
+                <label>
+                    <span>Descripción</span>
+                    <input id="descripcion" type="text" placeholder="Descripción" required>
+                </label>
+                
+                <label>
+                    <span>Unidad de Medida</span>
+                    <select id="unidad_medida" required><option value=""> </option></select>
+                </label>
+                
+                <button id="btn_guardar">Guardar</button>
+            </form>
+        </div>
+    </main>
+<script>document.getElementById("btn-articulos").classList.add("selected");</script>
+<script>const id = parseInt("<%= id %>");</script>
+<script type="module" src="/js/articulos/nuevo-editar.js"></script>
+<%- include('../footer') %>

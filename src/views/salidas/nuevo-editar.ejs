@@ -1,0 +1,50 @@
+<%- include('../header') %>
+    <header>
+        <span class="titulo">salidas</span>
+    </header>
+    <main>
+        <div class="form-container">
+            <form action="">
+                <label>
+                    <span>Fecha</span>
+                    <input id="fecha" type="date" required>
+                </label>
+                
+                <label>
+                    <span>Articulo</span>
+                    <select id="articulo" required><option value=""> </option></select>
+                </label>
+                
+                <label>
+                    <span>Tipo Doc</span>
+                    <select id="tipo_documento" required><option value=""> </option></select>
+                </label>
+                
+                <label>
+                    <span>N° Doc</span>
+                    <input id="numero_documento" type="text" required>
+                </label>
+                
+                <label>
+                    <span>Cantidad</span>
+                    <input id="cantidad" type="number" required>
+                </label>
+                
+                <label>
+                    <span>Prec/Uint</span>
+                    <input id="precio_unitario" type="number" step="any" required>
+                </label>
+                
+                <label>
+                    <span>Observación</span>
+                    <input id="observacion" type="text">
+                </label>
+                
+                <button id="btn_guardar">Guardar</button>
+            </form>
+        </div>
+    </main>
+<script>document.getElementById("btn-salidas").classList.add("selected");</script>
+<script>const id = parseInt("<%= id %>");</script>
+<script type="module" src="/js/salidas/nuevo-editar.js"></script>
+<%- include('../footer') %>
